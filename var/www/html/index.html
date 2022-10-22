@@ -1,0 +1,20 @@
+<html>
+<body>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function Users(){
+$.getJSON( "users.json", function(users) {
+  $.each(users, function(key, value) {
+    document.getElementById("user").innerHTML = value.email;
+  });
+});
+}
+</script>
+</head>
+<form>
+   <input type="button" onClick="Users()" value="Get Users">
+</form>
+<div id="user"/>
+</body>
+</html>
