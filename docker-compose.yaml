@@ -1,11 +1,13 @@
 services:
-  cypress:
-    image: cypress/included:10.10.0
-    volumes:
-      - ./cypress:/cypress
-      - ./cypress.config.js:/cypress.config.js
   httpd:
     image: httpd:2.4
     hostname: cypress.fsbano.io
     volumes:
       - ./index.html:/usr/local/apache2/htdocs/index.html:ro
+  cypress:
+    image: cypress/included:10.10.0
+    volumes:
+      - ./cypress:/cypress:rw
+      - ./cypress.config.js:/cypress.config.js
+    depends_on:
+      - httpd
