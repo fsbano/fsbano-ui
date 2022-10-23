@@ -1,0 +1,15 @@
+{
+  "name": "fsbano-ui",
+  "version": "1.0.0",
+  "description": "fsbano ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  }
+}
